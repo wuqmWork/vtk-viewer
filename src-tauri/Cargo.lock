@@ -3919,7 +3919,7 @@ dependencies = [
 
 [[package]]
 name = "vtk-viewer"
-version = "0.1.6"
+version = "0.1.8"
 dependencies = [
  "lexical-core",
  "rayon",

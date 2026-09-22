@@ -456,8 +456,9 @@ export class VtkScene {
     camera.setPosition(centerX, centerY, 4000)
     camera.setViewUp(0, 1, 0)
     camera.setParallelScale(Math.max(height * 0.56, width / aspect * 0.56, 100))
-    this.renderer.resetCameraClippingRange()
+    // 先构建栅格再计算裁剪范围：否则首次挂载时栅格为空，裁剪范围退回默认值 [0.01, 1000]（相对相机），z=0 的内容整体被裁剪，启动后栅格不可见。
     this.updateViewportGuides()
+    this.renderer.resetCameraClippingRange()
     this.renderWindow.render()
   }
 

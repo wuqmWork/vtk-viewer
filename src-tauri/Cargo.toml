@@ -1,6 +1,6 @@
 [package]
 name = "vtk-viewer"
-version = "0.1.7"
+version = "0.1.8"
 description = "24 galvo VTK viewer"
 authors = ["wuqmWork"]
 edition = "2021"
